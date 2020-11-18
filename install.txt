@@ -6,3 +6,11 @@
 (2) : default될 package를 만들어야함
 
  % 나중에 스프링 라이브러리를 많이 설치해서 충돌된다면 C:\Users\user\.m2 를 삭제하면 됨
+
+2. server추가는 밑의 창에 server를 선택하고 우리가 설치한 서버를 선택하면 된다
+brouse는 서버의 bin 전까지 설정함
+정확한 설정 여부를 확인하려면 lagacy프로젝트를 실행하면됨 > 프로젝트 선택 ctrl+f11
+
+3. encoding, default web 설정
+
+4. 만약 경로에 한글이 존재하면 에러가 발생할 수도 있음

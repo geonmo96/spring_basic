@@ -1,0 +1,8 @@
+1. market-place > STS 
+> spring tools 3 add-on for spring tools 4 3.9.15 snapshto
+> default 설치 > warning(skip) > restart
+ - (1)project 만들 때는 spring lagacy project > spring mvc project > (2) com.care.di_ex01
+(1) : 비어있는 프로젝트 - 내가 만들어가겠다는 프로젝트
+(2) : default될 package를 만들어야함
+
+ % 나중에 스프링 라이브러리를 많이 설치해서 충돌된다면 C:\Users\user\.m2 를 삭제하면 됨

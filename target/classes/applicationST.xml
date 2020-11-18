@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="st01" class="com.care.di_ex02.Student"></bean>
+	<!-- student 객체를 만듦 -->
+	
+	<bean id="stb" class="com.care.di_ex02.STBean">
+		<property name="st" ref="st01"></property>
+		<!-- ref : 생성한 객체를 참조할 때 사용 -->
+	</bean>
+
+</beans>

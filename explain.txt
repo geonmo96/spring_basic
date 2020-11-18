@@ -72,3 +72,14 @@ jsp파일을 실행하면 안됨 > mapping때문에
 서버 프로젝트의 server.xml의 마지막에
 <Context docBase="di" path="/di_ex01" reloadable="true" source="org.eclipse.jst.jee.server:di"/></Host>
 	보면 path가 di_ex01로 설정되어있음
+
+model이란 스프링인터페이스가 있음
+페지이에 index속성(value="기본페이지")가 추가됨
+@Controller
+public class MyController {
+	@RequestMapping("index")
+	public String index(Model model) {
+		model.addAttribute("index", "기본페이지"); 
+		return "member/index";
+	}
+}

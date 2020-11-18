@@ -20,5 +20,12 @@
 		<input type="text" name="age"><br>
 		<input type="submit" value="전송">
 	</form> 
+	
+	<h3>member방식 전송</h3>
+	<form action="result01" method="post">
+		<input type="text" name="name"><br>
+		<input type="text" name="age"><br>
+		<input type="submit" value="전송">
+	</form> 
 </body>
 </html>

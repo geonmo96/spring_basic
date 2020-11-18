@@ -14,3 +14,61 @@ src/test/java, src/test/resources : test해보라고 있는 폴더?
 
 
 classpath: > src/test/resources까지의 경로를 의미함
+
+
+
+설명들 ex02
+	/*
+	 * 이 클레스 입장에서는 print()를 하기 위해서는 st가 필요함
+	 * 	> stBean은 st에 의존하고 있음
+	 * 
+	 * main에서 st를 생성해 setSt로 주입했음
+	 * STBean은 new연산자를 사용한게 아니라 외부에서 주입된 개념임
+	 * */
+
+	<bean id="stb" class="com.care.di_ex02.STBean">
+		<property name="st" ref="st01"></property>
+		<!-- property : setter라고 생각 -->
+		<!-- ref : 생성한 객체를 참조할 때 사용 -->
+		
+		<property name="name" value="김말이"></property>
+		<property name="age"><value>123</value></property>
+		<!-- 객체가 아닌 데이터를 주입할 경우 위와 같이 사용 -->
+	</bean>
+
+- 외부 파일을 사용할 떄
+<context:property-placeholder location="classpath:user.properties"/>
+<!-- 외부파일의 경로 표현 -->
+
+<!-- 외부 파일을 사용하려면 xml파일의 밑에 namespace > context를 선택 -->
+<!-- EL표현식하듯 ${value}로 사용 -->
+<property name="name" value="${user.name1}"></property>
+<property name="age"><value>${user.age}</value></property>
+${user.name}은 이미 예약되어 있는 값이여서 다른 값이 나옴
+
+
+ - 웹 실행
+package com.care.di_ex01;
+@Controller
+public class MyController {
+	@RequestMapping("index")
+	public String index() {
+		return "member/index";
+	}
+}
+
+
+기본 jsp파일은 view안
+설정들은 servlet-context.xml에 있음
+return 값은 jsp파일의 이름이 들어감 > open
+	.jsp는 생략함
+jsp파일을 실행하면 안됨 > mapping때문에
+
+기본 설정된 값은 프로젝트 생성할 때의 package이다.
+그리고 controller와 requestMapping을 사용함
+
+마지막에 있는 package명이 기본 값?이다 - 임시 (di_ex01)
+
+서버 프로젝트의 server.xml의 마지막에
+<Context docBase="di" path="/di_ex01" reloadable="true" source="org.eclipse.jst.jee.server:di"/></Host>
+	보면 path가 di_ex01로 설정되어있음

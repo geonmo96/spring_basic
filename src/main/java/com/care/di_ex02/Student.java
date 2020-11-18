@@ -1,7 +1,5 @@
 package com.care.di_ex02;
 
-import org.springframework.context.annotation.Bean;
-
 public class Student {
 	
 	public void namePrint(String name) {

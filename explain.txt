@@ -1,0 +1,13 @@
+DI : Dependency Injection - 의존성 주입
+ dto를 통해서 객체를 생성하던 것을 바꿀수 있음
+IOC : 객체들을 가지고 있는 컨테이너
+ 객체들을 여러개 만들어놓고 필요한 객체를 가져와서 사용하는 것
+위와 같이 new 연산을 사용하지 않고 주입해서 사용하는 것을 의존성 주입이라고 생각하면 됨
+
+Frame-work : 하나의 틀(규격)을 의미
+ 이 틀이 이미 제공되어 있고, 그 틀 형식에 맞춰서 작성하는 개념
+ 규칙이 같다
+
+자바 코드를 작성할 때는 src/main/java안에 작성
+src/main/resources : 고정적인 파일 : 주입할 객체들(.xml)
+src/test/java, src/test/resources : test해보라고 있는 폴더?
